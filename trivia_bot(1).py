@@ -1,17 +1,6 @@
 #!/usr/bin/env python3
 """
-IFUNNY TEXT TRIVIA BOT - single-file Python trivia game
-
-Python 3.10+
-No third-party packages required.
-
-IMPORTANT:
-This file contains the complete trivia game engine and a simple terminal adapter.
-It does NOT automatically connect to iFunny. A live iFunny connection requires an
-official/supported bot API, webhook, or chat integration. Do not automate iFunny
-by scraping, stealing session cookies, or pretending this script is running inside
-the app. When a supported interface is available, call handle_message(username, text)
-for each incoming chat message and send each returned string back to the room.
+TEXT TRIVIA BOT - single-file Python trivia game
 
 Run locally:
     python trivia_bot.py
@@ -45,7 +34,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Optional
 
-APP_NAME = "iFunny Text Trivia"
+APP_NAME = "Trivia"
 DATA_FILE = Path(__file__).with_name("trivia_data.json")
 DEFAULT_ADMIN_PASSWORD = "change-me-now"
 ADMIN_PASSWORD = os.environ.get("TRIVIA_ADMIN_PASSWORD", DEFAULT_ADMIN_PASSWORD)
